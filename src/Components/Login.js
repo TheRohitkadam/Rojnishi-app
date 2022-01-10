@@ -1,5 +1,3 @@
-import * as React from "react";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -9,13 +7,11 @@ import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
+import Container from "@mui/material/Container";
 import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import {orange} from "@mui/material/colors"
 
 function Copyright(props) {
   return (
@@ -35,13 +31,10 @@ function Copyright(props) {
   );
 }
 
-// const theme = createTheme();
-
-export default function SignInSide() {
+export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
     console.log({
       email: data.get("email"),
       password: data.get("password"),
@@ -49,28 +42,22 @@ export default function SignInSide() {
   };
 
   return (
-    <>
+    <Container maxWidth="lg">
       <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
         <Grid
           item
           xs={false}
           sm={4}
-          md={8}
-          padding={3}
+          md={7}
           sx={{
             backgroundImage:
               "url(https://image.freepik.com/free-vector/diary-concept-illustration_114360-4158.jpg)",
             backgroundRepeat: "no-repeat",
-            backgroundColor: (t) =>
-              t.palette.mode === "light"
-                ? t.palette.grey[50]
-                : t.palette.grey[900],
-            // backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         ></Grid>
-        <Grid item xs={12} sm={8} md={4} component={Paper} elevation={0} square>
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={0} square>
           <Box
             sx={{
               my: 8,
@@ -80,20 +67,17 @@ export default function SignInSide() {
               alignItems: "center",
             }}
           >
-            {/* <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-              <LockOutlinedIcon />
-            </Avatar> */}
             <Typography
               component="h1"
               variant="p"
-              style={{ color: "#E33E7F", fontSize: 44 }}
+              style={{ color: "#f57c00", fontSize: 44 }}
             >
               Rojnishi
             </Typography>
             <Typography
               component="h3"
-              variant="h5"
-              style={{ fontWeight: 600, color: "#263238" }}
+              variant="h6"
+              style={{ fontWeight: 600, color: "#f57c00" }}
             >
               Sign in
             </Typography>
@@ -147,7 +131,7 @@ export default function SignInSide() {
                   </Link>
                 </Grid>
               </Grid>
-              <Divider sx={{ mt: 3, mb: 2 }}>or</Divider>
+              <Divider style={{color: 'grey'}} sx={{ mt: 3, mb: 2 }}>or</Divider>
               <Button
                 variant="outlined"
                 startIcon={<GoogleIcon />}
@@ -172,11 +156,11 @@ export default function SignInSide() {
               >
                 Made with 💖 in India
               </Typography>
-              <Copyright sx={{ mt: 2 }} />
+              <Copyright sx={{ mt: 1 }} />
             </Box>
           </Box>
         </Grid>
       </Grid>
-    </>
+    </Container>
   );
 }

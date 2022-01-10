@@ -1,8 +1,8 @@
 import { ThemeProvider } from "@mui/material/styles";
-import Appbar from "./Components/Appbar";
-import Login from "./Components/Login";
+import Appbar from "./Components";
+import { Login } from "./Components";
 import theme from "./config/theme";
-import './styles/App.css'
+import "./styles/App.css";
 
 function App() {
   return (

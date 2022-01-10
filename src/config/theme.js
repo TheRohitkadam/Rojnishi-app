@@ -3,12 +3,12 @@ import { orange } from "@mui/material/colors";
 
 
 const theme = createTheme({
-  // palette: {
-  //   primary: {
-  //     main: "#E33E7F",
-  //   //   main: "#fff",
-  //   },
-  // },
+  palette: {
+    primary: {
+      main: "#ef6c00",
+    //   main: "#fff",
+    },
+  },
   typography: {
     fontFamily: "Poppins",
     button: { 
