@@ -25,11 +25,12 @@ const Search = styled('div')(({ theme }) => ({
     backgroundColor: alpha(theme.palette.common.black, 0.25),
   },
   marginRight: theme.spacing(2),
+  justifyContent: 'center',
   marginLeft: 0,
-  width: '100%',
+  width: '60%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto',
+    marginLeft: theme.spacing(30),
+    // width: 'auto',
   },
 }));
 
@@ -158,8 +159,8 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" elevation={0}>
+    <Box sx={{ flexGrow: 1, color: '#e64027' }}>
+      <AppBar position="static" elevation={6} style={{color: 'white'}}>
         <Toolbar>
           {/* <IconButton
             size="large"
@@ -175,6 +176,7 @@ export default function PrimarySearchAppBar() {
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
+            style={{color: "#fff", fontWeight: 600}}
           >
             Rojnishi
           </Typography>
@@ -183,13 +185,14 @@ export default function PrimarySearchAppBar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
+              style={{width: "100%"}}
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+            <IconButton size="large" aria-label="show 4 new mails" style={{color: '#fff'}}>
               <Badge badgeContent={4} color="error">
                 <MailIcon />
               </Badge>
@@ -197,7 +200,7 @@ export default function PrimarySearchAppBar() {
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
-              color="inherit"
+              style={{color: '#fff'}}
             >
               <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
@@ -210,7 +213,7 @@ export default function PrimarySearchAppBar() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit"
+              style={{color: '#fff'}}
             >
               <AccountCircle />
             </IconButton>
@@ -222,7 +225,7 @@ export default function PrimarySearchAppBar() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color="inherit"
+              style={{color: '#fff'}}
             >
               <MoreIcon />
             </IconButton>

@@ -70,14 +70,14 @@ export default function Login() {
             <Typography
               component="h1"
               variant="p"
-              style={{ color: "#f57c00", fontSize: 44 }}
+              style={{ color: "#fe725c", fontSize: 44 }}
             >
               Rojnishi
             </Typography>
             <Typography
               component="h3"
               variant="h6"
-              style={{ fontWeight: 600, color: "#f57c00" }}
+              style={{ fontWeight: 600, color: "#fe725c" }}
             >
               Sign in
             </Typography>
